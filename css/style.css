@@ -24,3 +24,7 @@ a{
 .small-font{
     font-size: small;
 }
+
+.bg-forms{
+    background-color: rgb(13, 202, 240);
+}
