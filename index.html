@@ -19,7 +19,32 @@
         <div class="row d-flex ">
           <div class="col-12  d-flex justify-content-between p-2">
             <a href="http://www.boh.com">PROFILO</a>
-            <a href="www.boh.com">CONTACT ME</a>
+            <!--button-->
+            <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              CONTACT ME
+            </button>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Contatti</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <fieldset disabled>
+                    <div class="mb-3 mx-3">
+                      <label for="disabledTextInput" class="form-label">Numero di Telefono </label>
+                      <input type="text" id="disabledTextInput" class="form-control" placeholder="+39 123.456.78.90">
+                    </div>
+                    <div class="mb-3 mx-3">
+                      <label for="disabledTextInput" class="form-label">Email </label>
+                      <input type="text" id="disabledTextInput" class="form-control" placeholder="pincopallo@gmail.com">
+                    </div>
+                    <div class="mb-3 mx-3">
+                      <label for="disabledTextInput" class="form-label">P.E.C </label>
+                      <input type="text" id="disabledTextInput" class="form-control" placeholder="pincopallo@pec.com">
+                    </div>
+
+
           </div>
         </div>
       </div>  
