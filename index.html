@@ -193,8 +193,8 @@
               <input type="text" class="form-control" id="discount" >
             </div>
             <div class="p-2">
-              <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Specify yuor work commission..."></textarea>
+              <label for="textArea" class="form-label">Message</label>
+              <textarea class="form-control" id="textArea" placeholder="Specify yuor work commission..."></textarea>
             </div>
           </div> <!--row--> 
           <div class="row">
@@ -212,9 +212,26 @@
               Il prezzo per la tua consulenza è : <span id="price_for_work"></span>
             </h3>
           </div>
-        </div>
-        
+        </div>      
       </div>
+
+      <div class="container">
+        <div class="row justify-content-center align-items-center mt-5 p-5">
+            <div id="card" class="col-4 card p-0 d-none" >
+              <img src="./img/money.png" alt="Money">
+              <div class="card-body">
+                <h4 class="card-title">Richiesta di lavoro</h4>
+                <h5> Dati richiedente</h5>
+                <p id="name_card" class="card-text"></p>
+                <p id="surname_card" class="card-text"></p>
+                <p id="emailcard" class="card-text"></p>
+                <h5>Richiesta</h5>
+                <p id="text_richiesta" class="card-text"></p>
+              </div>
+            </div>
+          </div>
+      </div>
+
 
     </section>
       <footer class="bg-black">

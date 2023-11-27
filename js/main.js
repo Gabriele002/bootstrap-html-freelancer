@@ -1,10 +1,10 @@
 
 let sconto = [
-    { codiceSconto: "YHDNU32"},
-    { codiceSconto: "JANJC63"},
-    { codiceSconto: "PWKCN25"},
-    { codiceSconto: "SJDPO96"},
-    { codiceSconto: "POCIE24"},
+    { codiceSconto: "YHDNU32", used: false},
+    { codiceSconto: "JANJC63", used: false},
+    { codiceSconto: "PWKCN25", used: false},
+    { codiceSconto: "SJDPO96", used: false},
+    { codiceSconto: "POCIE24", used: false},
 ]
 
 function offer(event) {
@@ -14,6 +14,7 @@ function offer(event) {
     let surname = document.getElementById("surname").value;
     let mail = document.getElementById("mail").value;
     let hours = document.getElementById("hours").value;
+    let text = document.getElementById("textArea").value;
 
     hours = parseFloat(hours);
 
@@ -28,15 +29,23 @@ function offer(event) {
     let discountCode = document.getElementById("discount").value;
     let discountedPrice = price
 
+for (let i=0; i<sconto.length; i++ ) {
+        if (sconto.codiceSconto == discountCode && sconto.used == false) {
+            let discountedPrice = price - (price * 25 / 100); 
+            sconto.used = true; 
+        } else (
+            console.log("Non hai inserito il codice corretto o è già stato utilizzato.")
+        )
+    }
 
-    sconto.forEach(function (sconto)  {
-        if (sconto.codiceSconto == discountCode) {
-            let discountedPrice = price - (price * 25 / 100);      
-        }
-    })
+    document.getElementById("price_for_work").innerHTML = discountedPrice.toFixed(2) + "$";
+    document.getElementById("name_card").innerHTML = name
+    document.getElementById("surname_card").innerHTML = surname
+    document.getElementById("emailcard").innerHTML = mail;
+    document.getElementById("text_richiesta").innerHTML = text
 
-    document.getElementById("price_for_work").innerHTML = discountedPrice.toFixed(2)
-     
+    document.getElementById("card").classList.remove("d-none");
+    
 }    
 
 
