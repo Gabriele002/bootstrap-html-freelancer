@@ -17,7 +17,7 @@
     <header class="bg-header">
       <div class="container">
         <div class="row d-flex ">
-          <div class="col-12  d-flex justify-content-between p-2">
+          <div class="col-12  d-flex justify-content-between  p-2">
             <a href="http://www.boh.com">PROFILO</a>
             <!--button-->
             <button type="button" class="btn text-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -160,47 +160,52 @@
           </div>
         </div><!--chiusura row-->
 
-        <div class="row">
-          <div class="col-12 col-lg-6">
-            <label for="formGroupExampleInput" class="form-label p-2">First name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter yuor first name">
+          <!--inizio form-->
+        <form id="form_input_richiesta" data-bitwarden-watching="1" onsubmit="offer(event)">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <label for="name" class="form-label p-2">First name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter yuor first name">
+            </div>
+            <div class="col-12 col-lg-6">
+              <label for="surname" class="form-label p-2">Last name</label>
+              <input type="text" class="form-control" id="surname" placeholder="Enter your laste name">
+            </div>
+            <div class="col-12 col-lg-6">
+              <label for="mail" class="form-label p-2">Email address</label>
+              <input type="email" class="form-control" id="mail" placeholder="name@example.com">
+            </div>
+            <div class="col-12 col-lg-6">
+              <label for="formGroupExampleInput4" class="form-label p-2">Hours requested</label>
+              <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="Hours requested">
+            </div>
+            <div class="col-12 col-lg-6">
+              <label class="form-label p-2">Tipy of work</label>
+              <select class="form-select" id="tipo_di_lavoro">
+                <option selected>Select the type of work</option>
+                <option value="Backed">Backed Development</option>
+                <option value="Frontend">Frontend Development</option>
+                <option value="Project">Project Analisys</option>
+              </select>
+            </div>
+            <div class="col-12 col-lg-6">
+              <label for="formGroupExampleInput5" class="form-label p-2">Discount code</label>
+              <input type="text" class="form-control" id="formGroupExampleInput5" >
+            </div>
+            <div class="p-2">
+              <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Specify yuor work commission..."></textarea>
+            </div>
+          </div> <!--row--> 
+          <div class="row">
+            <div class="col-12 text-center p-3">
+              <button type="submit" class="btn btn-warning text-end">Preventivo</button>
+            </div>
           </div>
-          <div class="col-12 col-lg-6">
-            <label for="formGroupExampleInput2" class="form-label p-2">Last name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your laste name">
-          </div>
-          <div class="col-12 col-lg-6">
-            <label for="formGroupExampleInput3" class="form-label p-2">Email address</label>
-            <input type="email" class="form-control" id="formGroupExampleInput3" placeholder="name@example.com">
-          </div>
-          <div class="col-12 col-lg-6">
-            <label for="formGroupExampleInput4" class="form-label p-2">Hours requested</label>
-            <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="Hours requested">
-          </div>
-          <div class="col-12 col-lg-6">
-            <label class="form-label p-2">Tipy of work</label>
-            <select class="form-select" id="autoSizingSelect">
-              <option selected>Select the type of work</option>
-              <option value="1">Backed Development</option>
-              <option value="2">Frontend Development</option>
-              <option value="3">Project Analisys</option>
-            </select>
-          </div>
-          <div class="col-12 col-lg-6">
-            <label for="formGroupExampleInput5" class="form-label p-2">Discount code</label>
-            <input type="text" class="form-control" id="formGroupExampleInput5" >
-          </div>
-          <div class="p-2">
-            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Specify yuor work commission..."></textarea>
-          </div>
-        </div> <!--row--> 
-        <div class="row">
-          <div class="col-12 text-center p-3">
-            <button type="button" class="btn btn-warning"><strong>Send</strong></button>
-          </div>
-        </div>
-      </div> <!--container-->
+        </div> <!--container-->
+      </form>
+      <!--fine form-->
+
     </section>
       <footer class="bg-black">
         <div class="container text-center">
@@ -227,6 +232,10 @@
         </div><!--container-->
       </footer>
     </body>
+    
+    
+    
+    <script src="./js/main.js"></script>
     <!-- lasciarlo in fondo e non toglierlo -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
