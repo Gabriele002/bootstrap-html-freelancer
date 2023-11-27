@@ -22,16 +22,24 @@ function offer(event) {
     }
 
     let work = document.getElementById("tipo_di_lavoro").value;
-    work = parseFloat(work)
-
+    work = parseFloat(work);
     let price = work * hours;
-
-    console.log(price)
     
+    let discountCode = document.getElementById("discount").value;
+    let discountedPrice = price
 
-   
 
+    sconto.forEach(function (sconto)  {
+        if (sconto.codiceSconto == discountCode) {
+            let discountedPrice = price - (price * 25 / 100);      
+        }
+    })
+
+    document.getElementById("price_for_work").innerHTML = discountedPrice.toFixed(2)
+     
 }    
+
+
 
 
 
@@ -49,3 +57,4 @@ function getWorkPrice(work) {
     }
     return workPrice;
 }
+
