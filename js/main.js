@@ -30,9 +30,9 @@ function offer(event) {
     let discountedPrice = price
 
 for (let i=0; i<sconto.length; i++ ) {
-        if (sconto.codiceSconto == discountCode && sconto.used == false) {
-            let discountedPrice = price - (price * 25 / 100); 
-            sconto.used = true; 
+        if (sconto[i].codiceSconto == discountCode && sconto[i].used == false) {
+            discountedPrice = price - (price * 25 / 100); 
+            sconto[i].used = true; 
         } else (
             console.log("Non hai inserito il codice corretto o è già stato utilizzato.")
         )
@@ -43,7 +43,6 @@ for (let i=0; i<sconto.length; i++ ) {
     document.getElementById("surname_card").innerHTML = surname
     document.getElementById("emailcard").innerHTML = mail;
     document.getElementById("text_richiesta").innerHTML = text
-
     document.getElementById("card").classList.remove("d-none");
     
 }    
